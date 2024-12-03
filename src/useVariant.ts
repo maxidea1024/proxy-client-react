@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, useRef } from 'react';
-import { IVariant } from 'unleash-proxy-client';
+import type { IVariant } from 'unleash-proxy-client';
 import FlagContext from './FlagContext';
 
 export const variantHasChanged = (
