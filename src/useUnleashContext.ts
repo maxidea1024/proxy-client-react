@@ -3,7 +3,6 @@ import FlagContext from './FlagContext';
 
 const useUnleashContext = () => {
   const { updateContext } = useContext(FlagContext);
-
   return updateContext;
 };
 

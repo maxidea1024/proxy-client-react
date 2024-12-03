@@ -5,7 +5,6 @@ import FlagContext from './FlagContext';
 
 const useFlagsStatus = () => {
   const { flagsReady, flagsError } = useContext(FlagContext);
-
   return { flagsReady, flagsError };
 };
 

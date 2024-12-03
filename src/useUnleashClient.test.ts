@@ -9,6 +9,5 @@ vi.mock('react', async () => ({
 
 test('should return the client when calling useUnleashClient', () => {
   const { result } = renderHook(() => useUnleashClient());
-
   expect(result.current).toBe(clientMock);
 });

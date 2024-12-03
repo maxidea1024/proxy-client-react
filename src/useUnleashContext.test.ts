@@ -9,6 +9,5 @@ vi.mock('react', async () => ({
 
 test('should return the updateContext function from context', () => {
   const { result } = renderHook(() => useUnleashContext());
-
   expect(result.current).toBe(updateContextMock);
 });

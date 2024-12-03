@@ -13,7 +13,6 @@ export {
   LocalStorageProvider,
   InMemoryStorageProvider,
 } from 'unleash-proxy-client';
-
 import FlagContext from './FlagContext';
 import FlagProvider from './FlagProvider';
 import useFlag from './useFlag';
@@ -22,8 +21,7 @@ import useFlagsStatus from './useFlagsStatus';
 import useVariant from './useVariant';
 import useUnleashContext from './useUnleashContext';
 import useUnleashClient from './useUnleashClient';
-
-import { IFlagProvider } from './FlagProvider';
+import type { IFlagProvider } from './FlagProvider';
 
 export {
   FlagContext,

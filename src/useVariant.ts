@@ -3,17 +3,16 @@ import { IVariant } from 'unleash-proxy-client';
 import FlagContext from './FlagContext';
 
 export const variantHasChanged = (
-    oldVariant: IVariant,
-    newVariant?: IVariant,
+  oldVariant: IVariant,
+  newVariant?: IVariant,
 ): boolean => {
-    const variantsAreEqual =
-        oldVariant.name === newVariant?.name &&
-        oldVariant.enabled === newVariant?.enabled &&
-        oldVariant.feature_enabled === newVariant?.feature_enabled &&
-        oldVariant.payload?.type === newVariant?.payload?.type &&
-        oldVariant.payload?.value === newVariant?.payload?.value;
-
-    return !variantsAreEqual;
+  const variantsAreEqual =
+    oldVariant.name === newVariant?.name &&
+    oldVariant.enabled === newVariant?.enabled &&
+    oldVariant.feature_enabled === newVariant?.feature_enabled &&
+    oldVariant.payload?.type === newVariant?.payload?.type &&
+    oldVariant.payload?.value === newVariant?.payload?.value;
+  return !variantsAreEqual;
 };
 
 const useVariant = (featureName: string): Partial<IVariant> => {

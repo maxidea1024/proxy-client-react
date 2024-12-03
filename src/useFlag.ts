@@ -8,7 +8,9 @@ const useFlag = (featureName: string) => {
   flagRef.current = flag;
 
   useEffect(() => {
-    if (!client) return;
+    if (!client) {
+      return;
+    }
 
     const updateHandler = () => {
       const enabled = isEnabled(featureName);
