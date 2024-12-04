@@ -26,7 +26,9 @@ const useVariant = (featureName: string): Partial<IVariant> => {
   variantRef.current = variant;
 
   useEffect(() => {
-    if (!client) return;
+    if (!client) {
+      return;
+    }
 
     const updateHandler = () => {
       const newVariant = getVariant(featureName);
