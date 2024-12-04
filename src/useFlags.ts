@@ -5,15 +5,15 @@ const useFlags = () => {
   const { client } = useContext(FlagContext);
   const [flags, setFlags] = useState(client.getAllToggles());
 
-  useEffect(() => {
-    const onUpdate = () => {
-      setFlags(client.getAllToggles());
-    };
+  const updateHandler = () => {
+    setFlags(client.getAllToggles());
+  };
 
-    client.on('update', onUpdate);
+  useEffect(() => {
+    client.on('update', updateHandler);
 
     return () => {
-      client.off('update', onUpdate);
+      client.off('update', updateHandler);
     };
   }, []);
 

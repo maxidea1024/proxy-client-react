@@ -99,11 +99,12 @@ const FlagProvider: FC<PropsWithChildren<IFlagProvider>> = ({
     }
 
     // stop unleash client on unmount
-    return function cleanup() {
+    return () => {
       if (client.current) {
         client.current.off('error', errorCallback);
         client.current.off('ready', readyCallback);
         client.current.off('recovered', clearErrorCallback);
+
         if (stopClient) {
           client.current.stop();
         }
