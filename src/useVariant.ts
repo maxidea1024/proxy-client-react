@@ -17,7 +17,6 @@ export const variantHasChanged = (
 
 const useVariant = (featureName: string): Partial<IVariant> => {
   const { getVariant, client } = useContext(FlagContext);
-
   const [variant, setVariant] = useState(getVariant(featureName));
   const variantRef = useRef<typeof variant>({
     name: variant.name,
